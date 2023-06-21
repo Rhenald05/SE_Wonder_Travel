@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Header.master.cs" Inherits="LEtsgooo.AfterLog.Header" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FBF6D9;
+        }
+
+        .header {
+            background-color: #6c63ff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            font-size: 30px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .header-buttons {
+            display: flex;
+        }
+
+        .header-button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background-color: #fff;
+            border: 2px solid #6c63ff;
+            border-radius: 5px;
+            color: #6c63ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .header-button:hover {
+            background-color: #6c63ff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1 class="header-title">Wonder Travel</h1>
+            <div class="header-buttons">
+                <asp:Button ID="HomeBtn" runat="server" Text="Home" OnClick="HomeBtn_Click" CssClass="header-button" />
+                <asp:Button ID="DestinationBtn" runat="server" Text="Find Destination" OnClick="DestinationBtn_Click" CssClass="header-button" />
+                <asp:Button ID="AboutUsBtn" runat="server" Text="About Us" OnClick="AboutUsBtn_Click" CssClass="header-button" />
+                <asp:Button ID="LogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" CssClass="header-button" />
+                <asp:Button ID="PaymentBtn" runat="server" Text="More token" OnClick="PaymentBtn_Click" />
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
